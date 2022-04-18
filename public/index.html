@@ -27,23 +27,49 @@
   </head>
   <body>
     <nav>
-      <button id="homenav">Home</button>
-      <button id="singlenav">Flip one coin</button>
-      <button id="multinav">Flip multiple coins</button>
-      <button id="guessnav">Guess the result</button>
+      <button id="homenav" onclick="focusHome()">Home</button>
+      <button id="singlenav" onclick="focusSingleNav()">Flip one coin</button>
+      <button id="multinav" onclick="focusMultiNav()">Flip multiple coins</button>
+      <button id="guessnav" onclick="focusGuessNav()">Guess the result</button>
     </nav>
-    <div id="home">
-      
+
+    <div id="home" class="">
+      <p>this is a coin flipping interface!</p>
     </div>    
+
     <div id="single" class="hidden">
-      
+      <br><button id="flip" onclick="flipCoin()">Flip</button><br><br>
+      <img id="quarter" src="./assets/img/coin.png" width="100" height="100">
+      <br><p id="result"></p><br>
     </div>
+
     <div id="multi" class="hidden">
-      
+      <form id="coins">
+        <br>
+        <label for="number">How many flips?</label>
+        <input type="number" name="number" id="number">
+        <input type="submit" value="Flip Coins">
+      </form>
+      <br><br>
+        <p id="heads"></p>
+        <br>
+        <p id="tails"></p>
     </div>
+
     <div id="guess" class="hidden">
-      
+      <br>
+      <button id="callHeads" onclick="guessHeads()">Heads</button>
+      <br>
+      <br>
+      <button id="callTails" onclick="guessTails()">Tails</button>
+      <br>
+      <br>
+      <img id="quarterActual" src="./assets/img/coin.png" width ="100" height="100">
+      <br>
+      <br>
+      <p id="guessResult"></p>
     </div>
-	<script src="main.js"></script>
+
+  <script type ="text/javascript" src="main.js"></script>
   </body>
 </html>
